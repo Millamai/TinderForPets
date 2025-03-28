@@ -1,3 +1,6 @@
+using TinderForPets.Repository;
+using TinderForPets.Service;
+
 namespace TinderForPets
 {
     public class Program
@@ -5,7 +8,8 @@ namespace TinderForPets
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            builder.Services.AddSingleton<IPetRepository, PetCollectionRepository>();
+            builder.Services.AddSingleton<PetService>();
             // Add services to the container.
             builder.Services.AddRazorPages();
 

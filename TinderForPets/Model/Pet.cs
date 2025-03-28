@@ -1,8 +1,7 @@
 ﻿namespace TinderForPets.Model
 {
     public class Pet
-    {
-
+    { 
         public string Name { get; set; }
         public string Description { get; set; }
         public string ImagePath { set; get; }
